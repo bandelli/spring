@@ -1,7 +1,6 @@
 .project
 .classpath
 .settings
-brewer/.*
 /target/
 /.settings/
 /bin
