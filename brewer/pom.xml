@@ -106,6 +106,13 @@
     		<scope>compile</scope>
 		</dependency>
 		
+		 <!--Devtools -->
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-devtools</artifactId>
+		    <version>1.5.6.RELEASE</version>
+		</dependency>
+
 	</dependencies>
 	
 
