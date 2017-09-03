@@ -13,6 +13,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.DecimalMax;
+import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -36,16 +37,21 @@ public class Cerveja {
 	@NotBlank(message = "Nome é obrigatório")
 	private String nome;
 
-	@NotBlank (message = "A descrição é obrigatória")
-	@Size(min = 1, max = 50, message = "O tamanho da descrição deve estar entre 1 e 50")
+	@NotBlank(message = "A descrição é obrigatória")
+	@Size(max = 50, message = "O tamanho da descrição deve estar entre 1 e 50")
 	private String descricao;
+
+	@NotNull(message = "Valor é obrigatório")
+	@DecimalMin(value = "0.50", message = "O valor da cerveja deve ser maior que R$0,50")
+	@DecimalMax(value = "9999999.99", message = "O valor da cerveja deve ser menor que R$9.999.999,99")
+	private BigDecimal valor;
 
 	@NotNull(message = "O teor alcóolico é obrigatório")
 	@DecimalMax(value = "100.0", message = "O valor do teor alcóolico deve ser menor que 100")
-	@Column(name ="teor_alcoolico")
-	private BigDecimal valor;
+	@Column(name = "teor_alcoolico")
+	private BigDecimal teorAlcoolico;
 
-	@NotNull(message = "A comissao é obrigatória")
+	@NotNull(message = "A comissão é obrigatória")
 	@DecimalMax(value = "100.0", message = "A comissão deve ser igual ou menor que 100")
 	private BigDecimal comissao;
 
