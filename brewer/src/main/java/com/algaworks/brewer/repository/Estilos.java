@@ -11,4 +11,5 @@ import com.algaworks.brewer.model.Estilo;
 public interface Estilos extends JpaRepository<Estilo, Long> {
 
 	public Optional<Estilo> findByNomeIgnoreCase(String nome);
+	
 }
