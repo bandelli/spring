@@ -49,6 +49,10 @@
 		<!-- Jackson - JSON -->
 		<jackson-core.version>2.7.5</jackson-core.version>		
 		
+		<!-- thumbnailator - Gerar Thumbnail -->
+ 		<!-- https://github.com/coobird/thumbnailator -->
+		<thumbnailator.version>0.4.8</thumbnailator.version>
+				
 		<!--Devtools -->
 		<devtools.version>1.5.6.RELEASE</devtools.version>
 	</properties>
@@ -200,7 +204,15 @@
 		    <version>${jackson-core.version}</version>
 		    <scope>compile</scope>
 		</dependency>
-						
+
+		<!-- thumbnailator - Gerar Thumbnail -->
+		<dependency>
+			<groupId>net.coobird</groupId>
+			<artifactId>thumbnailator</artifactId>
+			<version>${thumbnailator.version}</version>
+			<scope>compile</scope>
+		</dependency>
+								
 		 <!--Devtools -->
 		<dependency>
 		    <groupId>org.springframework.boot</groupId>
