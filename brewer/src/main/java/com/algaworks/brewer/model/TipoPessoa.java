@@ -1,4 +1,3 @@
-
 package com.algaworks.brewer.model;
 
 import com.algaworks.brewer.model.validation.group.CnpjGroup;

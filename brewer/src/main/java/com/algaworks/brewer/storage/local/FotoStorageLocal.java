@@ -49,7 +49,6 @@ public class FotoStorageLocal implements FotoStorage {
 		return novoNome;
 	}
 	
-	
 	@Override
 	public byte[] recuperarFotoTemporaria(String nome) {
 		try {
@@ -109,9 +108,5 @@ public class FotoStorageLocal implements FotoStorage {
 		return novoNome;
 		
 	}
-
-
-
-
 
 }

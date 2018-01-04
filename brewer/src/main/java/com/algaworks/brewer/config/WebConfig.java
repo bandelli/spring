@@ -3,7 +3,6 @@ package com.algaworks.brewer.config;
 import java.math.BigDecimal;
 import java.util.Locale;
 
-import org.dom4j.datatype.DatatypeAttribute;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;

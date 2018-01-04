@@ -6,6 +6,7 @@ import org.springframework.util.StringUtils;
 import com.algaworks.brewer.model.Cidade;
 
 public class CidadeConverter implements Converter<String, Cidade> {
+
 	@Override
 	public Cidade convert(String codigo) {
 		if (!StringUtils.isEmpty(codigo)) {

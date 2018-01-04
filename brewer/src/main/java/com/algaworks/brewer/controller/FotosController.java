@@ -30,7 +30,7 @@ public class FotosController {
 		
 		return resultado;
 	}
-	// o :.* siginifica que pegará a extensão na passagem de parametro
+	
 	@GetMapping("/temp/{nome:.*}")
 	public byte[] recuperarFotoTemporaria(@PathVariable String nome) {
 		return fotoStorage.recuperarFotoTemporaria(nome);
