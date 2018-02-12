@@ -1,4 +1,3 @@
-
 package com.algaworks.brewer.repository.helper.cidade;
 
 import org.springframework.data.domain.Page;

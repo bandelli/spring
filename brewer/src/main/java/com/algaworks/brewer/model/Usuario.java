@@ -13,11 +13,16 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
 
+import com.algaworks.brewer.validation.AtributoConfirmacao;
+
+@AtributoConfirmacao(atributo = "senha", atributoConfirmacao = "confirmacaoSenha"
+				, message = "Confirmação da senha não confere")
 @Entity
 @Table(name = "usuario")
 public class Usuario implements Serializable {
@@ -36,16 +41,18 @@ public class Usuario implements Serializable {
 	private String email;
 
 	private String senha;
+	
+	@Transient
+	private String confirmacaoSenha;
 
 	private Boolean ativo;
 
-	@NotNull(message = "Selecione pelo menos um grupo")
+//	@NotNull(message = "Selecione pelo menos um grupo")
 	@ManyToMany
 	@JoinTable(name = "usuario_grupo", joinColumns = @JoinColumn(name = "codigo_usuario")
 				, inverseJoinColumns = @JoinColumn(name = "codigo_grupo"))	
 	private List<Grupo> grupos;
 
-	//@NotNull(message = "Data de nascimento é obrigatório")
 	@Column(name = "data_nascimento")
 	private LocalDate dataNascimento;
 
@@ -105,6 +112,14 @@ public class Usuario implements Serializable {
 		this.grupos = grupos;
 	}
 
+	public String getConfirmacaoSenha() {
+		return confirmacaoSenha;
+	}
+
+	public void setConfirmacaoSenha(String confirmacaoSenha) {
+		this.confirmacaoSenha = confirmacaoSenha;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -129,4 +144,5 @@ public class Usuario implements Serializable {
 			return false;
 		return true;
 	}
+
 }
