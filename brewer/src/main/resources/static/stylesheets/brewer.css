@@ -157,11 +157,17 @@
 	text-align: right;
 }
 
+/* Colunas - Pesquisa de usuários */
+.table-usuarios-col-status {
+	width: 30px;
+}
+
 /*
-#################################
+######################################
 # CUSTOMIZAÇÃO DE COMPONENTES
-#################################
+######################################
 */
+
 .checkbox input[type="checkbox"]:checked + input + label::after {
     font-family: 'FontAwesome';
     content: "\f00c"; 
