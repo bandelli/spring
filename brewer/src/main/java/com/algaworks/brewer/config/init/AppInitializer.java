@@ -38,3 +38,4 @@ public class AppInitializer extends AbstractAnnotationConfigDispatcherServletIni
 		registration.setMultipartConfig(new MultipartConfigElement(""));
 	}
 
+}
