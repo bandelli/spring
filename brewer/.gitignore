@@ -4,5 +4,5 @@
 /target/
 /.settings/
 /bin
-brewer/.idea/
+/brewer/.idea/*
 /brewer/brewer.iml
